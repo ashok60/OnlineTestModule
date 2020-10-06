@@ -1,0 +1,40 @@
+
+
+<div class="container">
+  <form #idform=ngForm (ngSubmit)=findTest(idform)>
+  
+    <div class="form-group">
+   
+    <input type="number" name="testid"  placeholder="Enter test id" ngModel class="form-control">
+  </div>
+    <input type="submit" value="Search" class="btn btn-success">
+  </form>
+  <br>
+  
+  
+  
+  <table class="table table-info table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Test Title</th>
+        <th scope="col">Test Duration</th>
+        <th scope="col">Total Marks</th>
+        <th scope="col">Marks Scored</th>
+          <th scope="col">Start Time</th>
+          <th scope="col">End time </th>
+      
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table table-light"   *ngIf="test!==undefined">
+        <td> {{test.testTitle}}</td>
+        <td>{{test.testDuration}}</td>
+        <td>{{test.testTotalMark}} </td>
+        <td>{{test.testMarkScored}} </td>
+        <td>{{test.startTime}}</td>
+        <td>{{test.endTime}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

@@ -1,0 +1,29 @@
+
+<div class="container">
+    <table class="table table-secondary table-borderless table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Test title</th>
+            <th scope="col">Test Duration</th>
+            <th scope="col">Total marks</th>
+            <th scope="col">Marks Scored</th>
+            <th scope="col">Start time</th>
+            <th scope="col">End time</th>
+            <th scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  class="table table-light"  *ngFor="let test of tests;let i=index">
+            <td>{{test.id}}</td>
+            <td>  {{test.testTitle}}</td>
+            <td> {{test.testDuration}}</td>
+            <td> {{test.testTotalMark}} </td>
+           <td> {{test.testMarkScored}}</td>
+           <td>  {{test.startTime}}</td>
+          <td> {{test.endTime}}</td>
+            <td><button class="btn btn-danger" (click)="removeTest(test.id)"  >Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+     
